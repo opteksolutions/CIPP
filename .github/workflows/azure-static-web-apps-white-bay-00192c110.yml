@@ -19,6 +19,27 @@ jobs:
         with:
           submodules: true
           lfs: false
+	  - name: Update Logo
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "(?i)<CImage className=\"sidebar-brand-full mt-3\" src=\{i\}"
+          replace: "<CImage className=\"sidebar-brand-full mt-3\" src=\"https://optekwebstorage.blob.core.windows.net/repository/logo_cipp.png\""
+          include: "src/components/layout/AppSidebar.jsx"
+          regex: true
+	  - name: Update CSS Themes
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "$cyberdrain-primary: #219c94;"
+          replace: "$cyberdrain-primary: #219c94;"
+          include: "src/scss/*"
+          regex: false		  
+	  - name: Update Footer
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "<CFooter(.*)<\/CFooter>"
+          replace: "<CFooter></CFooter>"
+          include: "src/components/layout/AppFooter.jsx"
+          regex: true
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
