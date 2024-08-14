@@ -22,7 +22,7 @@ jobs:
       - name: Update Logo
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "(?i)<CImage className=\"sidebar-brand-full mt-3\" src=\{i\}"
+          find: "(?i)<CImage className=\"sidebar-brand-full mt-3\" src=\\{i\\}"
           replace: "<CImage className=\"sidebar-brand-full mt-3\" src=\"https://optekwebstorage.blob.core.windows.net/repository/logo_cipp.png\""
           include: "src/components/layout/AppSidebar.jsx"
           regex: true
