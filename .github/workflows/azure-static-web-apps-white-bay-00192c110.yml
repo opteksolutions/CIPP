@@ -40,6 +40,8 @@ jobs:
           replace: "<CFooter></CFooter>"
           include: "src/components/layout/AppFooter.jsx"
           regex: true
+      - name: Push Updates
+        uses: stefanzweifel/git-auto-commit-action@v4
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
