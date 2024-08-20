@@ -29,7 +29,7 @@ jobs:
       - name: Update CSS Themes
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "$cyberdrain-primary: #219c94;"
+          find: "$cyberdrain-primary: #f77f00;"
           replace: "$cyberdrain-primary: #219c94;"
           include: "src/scss/*"
           regex: false		  
