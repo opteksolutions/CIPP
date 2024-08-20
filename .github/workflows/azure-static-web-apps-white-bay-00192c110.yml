@@ -20,17 +20,10 @@ jobs:
       - name: Update CSS Themes
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "$cyberdrain-primary: #f77f00;"
-          replace: "$cyberdrain-primary: #219c94;"
+          find: "cyberdrain-primary: #f77f00;"
+          replace: "cyberdrain-primary: #219c94;"
           include: "src/scss/*"
           regex: false
-      - name: Update Logo
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: "<CImage className=\"sidebar-brand-full mt-3\" src=\\{i\\}"
-          replace: "<CImage className=\"sidebar-brand-full mt-3\" src=\"https://optekwebstorage.blob.core.windows.net/repository/logo_cipp.png\""
-          include: "src/components/layout/AppSidebar.jsx"
-          regex: true
       - name: Update Footer
         uses: jacobtomlinson/gha-find-replace@v3
         with:
@@ -38,6 +31,13 @@ jobs:
           replace: "<CFooter></CFooter>"
           include: "src/components/layout/AppFooter.jsx"
           regex: true
+      - name: Update Logo
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: <CImage className="sidebar-brand-full mt-3" src={i}
+          replace: <CImage className="sidebar-brand-full mt-3" src="https://optekwebstorage.blob.core.windows.net/repository/logo_cipp.png"
+          include: "src/components/layout/AppSidebar.jsx"
+          regex: false
       - name: Push Updates
         uses: stefanzweifel/git-auto-commit-action@v4
       - name: Build And Deploy
@@ -47,13 +47,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WHITE_BAY_00192C110 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
-
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
