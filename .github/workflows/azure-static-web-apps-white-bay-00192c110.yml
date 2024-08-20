@@ -31,13 +31,6 @@ jobs:
           replace: "<CFooter></CFooter>"
           include: "src/components/layout/AppFooter.jsx"
           regex: true
-      - name: Update Logo
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: <CImage className="sidebar-brand-full mt-3" src={i}
-          replace: <img className="sidebar-brand-full mt-3" src="https://optekwebstorage.blob.core.windows.net/static/logo_cipp.png"
-          include: "src/components/layout/AppSidebar.jsx"
-          regex: false
       - name: Push Updates
         uses: stefanzweifel/git-auto-commit-action@v4
       - name: Build And Deploy
