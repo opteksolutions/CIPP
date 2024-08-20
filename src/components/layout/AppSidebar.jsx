@@ -38,7 +38,7 @@ const AppSidebar = () => {
       visible={sidebarShow}
     >
       <CSidebarBrand className="me-auto pt-xs-2 p-md-2" to="/">
-        <img className="sidebar-brand-full mt-3" src="https://optekwebstorage.blob.core.windows.net/static/logo_cipp.png" height={80} />
+        <img className="sidebar-brand-full mt-3" src={i} height={80} />
         <CHeaderNav className="me-2 p-2"></CHeaderNav>
       </CSidebarBrand>
       <CCloseButton
