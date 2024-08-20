@@ -24,7 +24,7 @@ jobs:
           replace: "cyberdrain-primary: #219c94;"
           include: "src/scss/*"
           regex: false
-      - name: Update Footer
+      - name: Clean Footer
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "<CFooter(.*)<\\/CFooter>"
