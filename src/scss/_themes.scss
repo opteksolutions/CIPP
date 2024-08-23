@@ -226,7 +226,7 @@
   --cui-color-black: rgb(0, 0, 0);
   --cui-color-white: rgb(255, 255, 255);
   --cui-bgcolor-table-header: rgba(105, 105, 105, 0.973);
-  --cui-color-orange: #f77f00;
+  --cui-color-orange: var(--cyberdrain-primary-rgb);
   --cui-color-header-bar: rgba(210, 210, 210, 0.8);
   --cui-color-table-border: rgba(210, 210, 210, 0.8);
   --cui-color-table-border: rgba(210, 210, 210, 0.8);
@@ -338,7 +338,7 @@
     z-index: 1; /* Necessary for overflow: hidden to work correctly in Safari */
   }
   .card {
-    box-shadow: 0 0.25rem 0.25rem rgba(black, 0.15);
+    box-shadow: 0 0 0.25rem rgba(black, 0.15);
   }
   .react-loading-skeleton::after {
     content: ' ';
