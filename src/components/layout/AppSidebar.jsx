@@ -19,7 +19,6 @@ import { useNavFavouriteCheck } from 'src/hooks/useNavFavouriteCheck'
 import logo from 'src/assets/images/logo_cipp.png'
 
 const AppSidebar = () => {
-
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.app.sidebarShow)
   const newNav = useRouteNavCompare(navigation)
