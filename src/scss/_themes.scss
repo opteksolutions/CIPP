@@ -338,7 +338,7 @@
     z-index: 1; /* Necessary for overflow: hidden to work correctly in Safari */
   }
   .card {
-    box-shadow: 0 1rem 3rem rgba(black, 0.175);
+    box-shadow: 0 0.25rem 0.25rem rgba(black, 0.15);
   }
   .react-loading-skeleton::after {
     content: ' ';
