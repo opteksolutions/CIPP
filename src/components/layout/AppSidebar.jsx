@@ -33,7 +33,7 @@ const AppSidebar = () => {
       unfoldable={false}
       visible={sidebarShow}
     >
-      <CSidebarBrand className="me-auto pt-xs-2 p-md-2" to="/">
+      <CSidebarBrand className="me-auto pt-xs-2" to="/">
         <CImage className="sidebar-brand-full mt-3" src={logo} height={80} />
         <CHeaderNav className="me-2 p-2"></CHeaderNav>
       </CSidebarBrand>
