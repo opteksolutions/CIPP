@@ -16,8 +16,7 @@ import { useAuthCheck } from '../utilities/CippauthCheck'
 import routes from 'src/routes'
 import { useRouteNavCompare } from 'src/hooks/useRouteNavCompare'
 import { useNavFavouriteCheck } from 'src/hooks/useNavFavouriteCheck'
-
-import logo from 'src/assets/images/logo_cipp.png';
+import logo from 'src/assets/images/logo_cipp.png'
 
 const AppSidebar = () => {
 
